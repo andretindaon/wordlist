@@ -10,7 +10,7 @@ from pymongo import MongoClient
 import requests 
 from datetime import datetime
 from bson import ObjectId
-
+from http import client
 import os
 from os.path import join, dirname
 from dotenv import load_dotenv
@@ -24,7 +24,7 @@ DB_NAME =  os.environ.get("DB_NAME")
 client = MongoClient(MONGODB_URI)
 db = client[DB_NAME]
 app = Flask(__name__)
-app = Flask(__name__)
+
 
 @app.route('/')
 def main():
